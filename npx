@@ -1,0 +1,4 @@
+# To see which version of some package you have
+npx <package> -v
+npx next -v
+

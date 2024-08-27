@@ -26,3 +26,7 @@ npm uninstall <package>
 
 # To set the `authToken` using env variable `NPM_TOKEN`:
 npm config set //npm.intra/:_authToken=\${NPM_TOKEN}
+
+# To run the project on a certain port
+PORT=<port-number> npm start
+
