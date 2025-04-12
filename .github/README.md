@@ -1,7 +1,8 @@
-cheatsheets
+SepCheatSheets
 ===========
 This repository contains community-sourced cheatsheets to be used with
-[cheat][] and similar applications.
+[cheat][] and similar applications. the main repo is not maintained anymore, I am maintaing my own version and I do regular updates
+feel free to contribute
 
 ### Format ###
 Cheatsheets are plain-text files that begin with an optional "front matter"
