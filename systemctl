@@ -52,6 +52,9 @@ journalctl -k
 # To get the log entries for a service since boot:
 journalctl -b -u foo.service
 
+# To listen to logs of a certain service:
+journalctl -f -u nginx.service
+
 # To list the dependencies of a service:
 # when no service name is specified, lists the dependencies of default.target
 # add -all to expand dependencies recursively
@@ -68,3 +71,10 @@ systemctl isolate foo.target
 
 # To change default target:
 systemctl enable foo.target
+
+# To mask a service:
+systemctl mask foo.service
+
+# To unmask a service:
+systemctl unmask foo.service
+

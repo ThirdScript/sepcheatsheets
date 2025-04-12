@@ -11,6 +11,7 @@ systemctl list-units
 systemctl enable foo.service
 
 # To start or Stop a unit:
+# See systemctl cheatsheet for more options
 systemctl <start | stop> foo.service
 
 # To unit file locations:
