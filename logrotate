@@ -1,0 +1,9 @@
+---
+tags: [ logs ]
+---
+# To ping <host> with 15 packets:
+# To run a log rotation inside <file> config
+logrotate -f <file>
+logrotate /etc/logrotate.d/mongodb
+
+

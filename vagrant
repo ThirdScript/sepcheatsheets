@@ -1,23 +1,106 @@
-# To initate Vagrant:
-vagrant init
+# VAGRANT CHEATSHEET
 
-# To add a box to a vagrant repo:
-vagrant box add hashicorp/precise32
+## Getting Started
+# Initialize a new Vagrant environment
+vagrant init [box-name]
 
-# To start a vm:
+# Add a box to your local Vagrant
+vagrant box add [name] [url]
+
+# Initialize with a specific box
+vagrant init hashicorp/precise32
+
+## Box Management
+# List all installed boxes
+vagrant box list
+
+# Remove a box
+vagrant box remove [name]
+
+# Update a box
+vagrant box update --box [name]
+
+# Check for box updates
+vagrant box outdated
+
+## VM Lifecycle
+# Start and provision the VM
 vagrant up
 
-# To connect to a running instance:
-vagrant ssh
+# Restart the VM
+vagrant reload
 
-# To shut down a vm:
-vagrant halt
+# Restart VM with new provisioning
+vagrant reload --provision
 
-# To hibernate a vm:
+# Pause the VM
 vagrant suspend
 
-# To set a vm to its initial state by cleaning all data:
-vagrant destroy
+# Resume a suspended VM
+vagrant resume
 
-# To restart a vm with a new provision script:
-vagrant reload --provision
+# Shutdown the VM
+vagrant halt
+
+# Destroy the VM (delete all traces)
+vagrant destroy [-f]
+
+## Status and SSH
+# Check status of all VMs
+vagrant status
+
+# Connect to the VM via SSH
+vagrant ssh
+
+# Get SSH configuration
+vagrant ssh-config
+
+## Provisioning
+# Provision the VM
+vagrant provision
+
+# Run a specific provisioner
+vagrant provision --provision-with [name]
+
+## Snapshots
+# Take a snapshot
+vagrant snapshot save [name]
+
+# List snapshots
+vagrant snapshot list
+
+# Restore a snapshot
+vagrant snapshot restore [name]
+
+# Delete a snapshot
+vagrant snapshot delete [name]
+
+## Multi-VM Management
+# Start a specific VM
+vagrant up [name]
+
+# SSH into a specific VM
+vagrant ssh [name]
+
+## Plugins
+# List installed plugins
+vagrant plugin list
+
+# Install a plugin
+vagrant plugin install [name]
+
+# Update all plugins
+vagrant plugin update
+
+## Miscellaneous
+# Validate Vagrantfile
+vagrant validate
+
+# Print Vagrant version
+vagrant version
+
+# Global status of all VMs
+vagrant global-status
+
+# Clean up outdated entries
+vagrant global-status --prune
