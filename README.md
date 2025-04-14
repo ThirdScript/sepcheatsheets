@@ -30,12 +30,14 @@ personal:  /home/sepehr/snap/cheat/common/.config/cheat/cheatsheets/personal
 ```
 go to either the community or personal folder and add this repository as your remote
 
-#### To change community cheatsheets to SepCheatsheets
+#### To change personal cheatsheets to SepCheatsheets
 #### If you installed by another way, the personal cheatsheet folder might be in a different path
+### Also you need to remove community cheatsheets or do something with it ...
 ```sh
 mkdir -p ~/.config/cheat/cheatsheets/personal
 mkdir -p ~/.config/cheat/cheatsheets/community
-git clone git@github.com:ThirdScript/sepcheatsheets.git ~/.config/cheat/cheatsheets/personal
+rm -rf  ~/.config/cheat/cheatsheets/community/*
+git clone https://github.com/ThirdScript/sepcheatsheets.git ~/.config/cheat/cheatsheets/personal
 ```
 
 ### Format ###
