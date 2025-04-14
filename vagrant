@@ -76,11 +76,26 @@ vagrant snapshot restore [name]
 vagrant snapshot delete [name]
 
 ## Multi-VM Management
-# Start a specific VM
+# List all Vagrant machines (across all projects)
+vagrant global-status
+
+# List running machines in current project
+vagrant status
+
+# Start a specific VM in multi-VM environment
 vagrant up [name]
 
 # SSH into a specific VM
 vagrant ssh [name]
+
+# Halt a specific VM
+vagrant halt [name]
+
+# Destroy a specific VM
+vagrant destroy [name]
+
+# Execute a command on a specific VM
+vagrant ssh [name] -c "command"
 
 ## Plugins
 # List installed plugins
@@ -99,8 +114,5 @@ vagrant validate
 # Print Vagrant version
 vagrant version
 
-# Global status of all VMs
-vagrant global-status
-
-# Clean up outdated entries
+# Clean up outdated entries from global-status
 vagrant global-status --prune
