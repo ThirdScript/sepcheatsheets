@@ -1,0 +1,3 @@
+# Converting images to webp format
+cwebp -q 20 file.jpg -o output.webp
+
