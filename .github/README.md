@@ -1,8 +1,45 @@
 SepCheatSheets
 ===========
 This repository contains community-sourced cheatsheets to be used with
-[cheat][] and similar applications. the main repo is not maintained anymore, I am maintaing my own version and I do regular updates
-feel free to contribute
+[cheat][] and similar applications.
+the old repository is not maintained anymore, I am working on this myself
+and I would be very happy if anyone wanted to contribute
+
+Installing
+==========
+`cheat` has no runtime dependencies. As such, installing it is generally
+straightforward. There are a few methods available:
+
+### Install manually
+#### Unix-like
+On Unix-like systems, you may simply paste the following snippet into your terminal:
+
+```sh
+cd /tmp \
+  && wget https://github.com/cheat/cheat/releases/download/4.4.2/cheat-linux-amd64.gz \
+  && gunzip cheat-linux-amd64.gz \
+  && chmod +x cheat-linux-amd64 \
+  && sudo mv cheat-linux-amd64 /usr/local/bin/cheat
+```
+
+### How to use this ? ###
+> cheat -d
+```sh
+community: /home/sepehr/snap/cheat/common/.config/cheat/cheatsheets/community
+personal:  /home/sepehr/snap/cheat/common/.config/cheat/cheatsheets/personal
+```
+go to either the community or personal folder and add this repository as your remote
+
+#### To change personal cheatsheets to SepCheatsheets
+#### If you installed by another way, the personal cheatsheet folder might be in a different path
+### Also you need to remove community cheatsheets or do something with it ...
+```sh
+mkdir -p ~/.config/cheat/cheatsheets/personal
+mkdir -p ~/.config/cheat/cheatsheets/community
+rm -rf  ~/.config/cheat/cheatsheets/community/*
+git clone https://github.com/ThirdScript/sepcheatsheets.git ~/.config/cheat/cheatsheets/personal
+```
+>>>>>>> 1932f8eb62b083fb2ae2f334d8b4238aa29c7aff
 
 ### Format ###
 Cheatsheets are plain-text files that begin with an optional "front matter"
