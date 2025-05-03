@@ -9,3 +9,7 @@ cat /private/etc/man.conf
 
 # To check the existence of a keyword in all of man pages:
 man -k <keyword>
+
+# Provide the manpage as standard output inside the console instead of the default reader:
+
+man -P cat COMMAND
